@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://emanuah.pages.dev/sitemap.xml",
+    sitemap: "https://emanuah-site.pages.dev/sitemap.xml",
   };
 }
