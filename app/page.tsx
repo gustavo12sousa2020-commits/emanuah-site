@@ -423,13 +423,6 @@ const { scrollYProgress: manifestoProgress } = useScroll({
               </button>
 
               <button
-                onClick={() => scrollTo("experiencias")}
-                className="nav-link"
-              >
-                EXPERIÊNCIAS
-              </button>
-
-              <button
                 onClick={() => scrollTo("sobre")}
                 className="nav-link"
               >
@@ -512,15 +505,6 @@ const { scrollYProgress: manifestoProgress } = useScroll({
                 className="mobile-nav-link"
               >
                 SERVIÇOS
-              </button>
-
-              <button
-                onClick={() =>
-                  scrollTo("experiencias")
-                }
-                className="mobile-nav-link"
-              >
-                EXPERIÊNCIAS
               </button>
 
               <button
@@ -1230,7 +1214,7 @@ const { scrollYProgress: manifestoProgress } = useScroll({
 
                     <Image
                       src={artist.image}
-                      alt={`Emanuàh Group - ${artist.name}`}
+                      alt={artist.name}
                       fill
                       sizes="(max-width: 640px) 82vw, (max-width: 1024px) 55vw, 430px"
                       className={`${artist.imageClass} artist-card-image transition-transform duration-700 group-hover:scale-[1.045]`}
@@ -1374,65 +1358,6 @@ const { scrollYProgress: manifestoProgress } = useScroll({
         </div>
 
       </section>
-
-      {/* =========================================================
-    EXPERIÊNCIAS
-========================================================= */}
-
-<section
-  id="experiencias"
-  aria-labelledby="experiencias-title"
-  className="relative border-t border-white/[0.08] py-32 lg:py-44"
->
-  <div className="mx-auto max-w-[1400px] px-6 lg:px-14">
-
-    <div className="mb-20 flex flex-col justify-between gap-8 md:flex-row md:items-end">
-
-      <div>
-        <span className="text-[10px] tracking-[0.35em] text-white/35">
-          04 / EXPERIÊNCIAS
-        </span>
-
-        <h2
-          id="experiencias-title"
-          className="mt-5 font-serif text-[clamp(3.5rem,7vw,7rem)] leading-none tracking-[-0.05em]"
-        >
-          MOMENTOS
-        </h2>
-      </div>
-
-    </div>
-
-    <div className="overflow-hidden bg-[#101010]">
-
-      <div className="relative aspect-[16/9] w-full bg-black">
-
-        <video
-          src="/videos/momentos.mp4"
-          controls
-          playsInline
-          preload="metadata"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-
-      </div>
-
-      <div className="border-t border-white/10 px-6 py-6 md:px-8 md:py-7">
-
-        <span className="text-[9px] tracking-[0.3em] text-white/40">
-          EXPERIÊNCIA EMANUÀH
-        </span>
-
-        <h3 className="mt-2 font-serif text-2xl text-white md:text-3xl">
-          Momentos que permanecem.
-        </h3>
-
-      </div>
-
-    </div>
-
-  </div>
-</section>
 
       {/* =========================================================
           AGENDAMENTOS
