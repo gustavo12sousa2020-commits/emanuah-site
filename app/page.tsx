@@ -339,10 +339,6 @@ const { scrollYProgress: manifestoProgress } = useScroll({
   <h2 id="empresa-title">Emanuàh Group</h2>
 
   <p>
-  
-  </p>
-
-  <p>
     A Emanuàh Group conecta talentos a projetos e experiências,
     oferecendo assessoria artística, gestão de talentos, booking
     artístico, produção de eventos, desenvolvimento artístico e
@@ -754,7 +750,7 @@ const { scrollYProgress: manifestoProgress } = useScroll({
                       currentSlide
                     ].image
                   }
-                  alt={`Emanuàh Group - ${carouselArtists[currentSlide].name}`}
+                  alt={carouselArtists[currentSlide].name}
                   fill
                   sizes="(max-width: 1024px) 100vw, 48vw"
                   className="scale-110 object-cover object-center opacity-35 blur-2xl"
@@ -1875,6 +1871,22 @@ const { scrollYProgress: manifestoProgress } = useScroll({
           opacity: 1;
           transform: translateX(100%);
         }
+
+@media (max-width: 640px) {
+  .hero-word:hover {
+    transform: none;
+  }
+
+  .artist-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .artist-card:hover .artist-card-image {
+    filter: none;
+  }
+}
+
 
       `}</style>
 
