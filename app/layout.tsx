@@ -12,18 +12,21 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://emanuah-site.pages.dev";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://emanuah.netlify.app"),
+  metadataBase: new URL(SITE_URL),
 
   title: {
-    default: "Emanuah Group | Assessoria Artística & Gestão de Talentos",
-    template: "%s | Emanuah Group",
+    default: "Emanuàh Group | Assessoria Artística & Gestão de Talentos",
+    template: "%s | Emanuàh Group",
   },
 
   description:
-    "Emanuah Group: assessoria artística, gestão de talentos e produção de eventos. Conectamos artistas, marcas e experiências.",
+    "Emanuàh Group atua com assessoria artística, gestão de talentos, booking e produção de eventos, conectando artistas, eventos e experiências.",
 
   keywords: [
+    "Emanuàh Group",
     "Emanuah Group",
     "assessoria artística",
     "gestão de talentos",
@@ -32,24 +35,27 @@ export const metadata: Metadata = {
     "booking artístico",
     "artistas",
     "eventos",
+    "shows",
+    "eventos gospel",
   ],
 
   authors: [
     {
-      name: "Emanuah Group",
+      name: "Emanuàh Group",
     },
   ],
 
-  creator: "Emanuah Group",
-  publisher: "Emanuah Group",
+  creator: "Emanuàh Group",
+  publisher: "Emanuàh Group",
 
   alternates: {
-    canonical: "https://emanuah.netlify.app/",
+    canonical: SITE_URL,
   },
 
   robots: {
     index: true,
     follow: true,
+
     googleBot: {
       index: true,
       follow: true,
@@ -62,21 +68,38 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://emanuah.netlify.app/",
-    siteName: "Emanuah Group",
-    title: "Emanuah Group | Assessoria Artística & Gestão de Talentos",
+    url: SITE_URL,
+    siteName: "Emanuàh Group",
+    title: "Emanuàh Group | Assessoria Artística & Gestão de Talentos",
     description:
-      "Assessoria artística, gestão de talentos e produção de eventos.",
+      "Assessoria artística, gestão de talentos, booking e produção de eventos.",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Emanuah Group | Assessoria Artística & Gestão de Talentos",
+    title: "Emanuàh Group | Assessoria Artística & Gestão de Talentos",
     description:
-      "Assessoria artística, gestão de talentos e produção de eventos.",
+      "Assessoria artística, gestão de talentos, booking e produção de eventos.",
   },
 
   category: "business",
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Emanuàh Group",
+  alternateName: "Emanuah Group",
+  url: SITE_URL,
+  description:
+    "Assessoria artística, gestão de talentos, booking e produção de eventos.",
+  sameAs: ["https://www.instagram.com/emanuahoficial/"],
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+55 11 94506-5689",
+    contactType: "customer service",
+    availableLanguage: ["pt-BR"],
+  },
 };
 
 export default function RootLayout({
@@ -85,9 +108,21 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={
+        geistSans.variable +
+        " " +
+        geistMono.variable +
+        " h-full antialiased"
+      }
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+
         {children}
       </body>
     </html>
