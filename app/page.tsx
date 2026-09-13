@@ -1421,81 +1421,43 @@ const { scrollYProgress: manifestoProgress } = useScroll({
           <div className="grid gap-5 md:grid-cols-2">
 
             <motion.div
-              initial={{
-                opacity: 0,
-                y: 30,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              viewport={{
-                once: true,
-              }}
-              transition={{
-                duration: 0.8,
-              }}
-              className="group relative aspect-[4/5] overflow-hidden bg-[#101010]"
-            >
+  initial={{
+    opacity: 0,
+    y: 30,
+  }}
+  whileInView={{
+    opacity: 1,
+    y: 0,
+  }}
+  viewport={{
+    once: true,
+  }}
+  transition={{
+    duration: 0.8,
+  }}
+  className="group relative aspect-[16/9] overflow-hidden bg-[#101010] md:col-span-2"
+>
+  <video
+  src="/videos/momentos.mp4"
+  controls
+  loop
+  playsInline
+  preload="metadata"
+  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+/>
 
-              <div className="absolute inset-0 flex items-end p-8">
+  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
 
-                <div>
+  <div className="absolute bottom-0 left-0 p-8 md:p-10">
+    <span className="text-[9px] tracking-[0.3em] text-white/50">
+      EXPERIÊNCIA EMANUÀH
+    </span>
 
-                  <span className="text-[9px] tracking-[0.3em] text-white/30">
-                    EXPERIÊNCIA 01
-                  </span>
-
-                  <h3 className="mt-3 font-serif text-3xl">
-                    Produção & Eventos
-                  </h3>
-
-                </div>
-
-              </div>
-
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
-
-            </motion.div>
-
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: 30,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              viewport={{
-                once: true,
-              }}
-              transition={{
-                duration: 0.8,
-                delay: 0.1,
-              }}
-              className="group relative aspect-[4/5] overflow-hidden bg-[#101010] md:mt-24"
-            >
-
-              <div className="absolute inset-0 flex items-end p-8">
-
-                <div>
-
-                  <span className="text-[9px] tracking-[0.3em] text-white/30">
-                    EXPERIÊNCIA 02
-                  </span>
-
-                  <h3 className="mt-3 font-serif text-3xl">
-                    Artistas & Palco
-                  </h3>
-
-                </div>
-
-              </div>
-
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
-
-            </motion.div>
+    <h3 className="mt-3 font-serif text-3xl md:text-4xl">
+      Momentos que permanecem.
+    </h3>
+  </div>
+</motion.div>
 
           </div>
 
