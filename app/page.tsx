@@ -69,7 +69,7 @@ const artists = [
   },
   {
     number: "07",
-    name: "Weslay",
+    name: "Wesley",
     role: "ARTISTA",
     description: "Música",
     image: "/weslay.png",
@@ -130,7 +130,7 @@ const carouselArtists = [
   },
   {
     number: "07",
-    name: "Weslay",
+    name: "Wesley",
     role: "ARTISTA",
     description: "Música",
     image: "/carousel/waslay.jpg",
@@ -205,7 +205,7 @@ function ManifestoCharacter({
 
   return (
     <motion.span style={{ opacity }}>
-      {character === " " ? "\u00A0" : character}
+      {character === " " ? " " : character}
     </motion.span>
   );
 }
@@ -1380,86 +1380,63 @@ const { scrollYProgress: manifestoProgress } = useScroll({
       </section>
 
       {/* =========================================================
-          EXPERIÊNCIAS
-      ========================================================= */}
+    EXPERIÊNCIAS
+========================================================= */}
 
-      <section
+<section
   id="experiencias"
   aria-labelledby="experiencias-title"
   className="relative border-t border-white/[0.08] py-32 lg:py-44"
 >
+  <div className="mx-auto max-w-[1400px] px-6 lg:px-14">
 
-        <div className="mx-auto max-w-[1400px] px-6 lg:px-14">
+    <div className="mb-20 flex flex-col justify-between gap-8 md:flex-row md:items-end">
 
-          <div className="mb-20 flex flex-col justify-between gap-8 md:flex-row md:items-end">
+      <div>
+        <span className="text-[10px] tracking-[0.35em] text-white/35">
+          04 / EXPERIÊNCIAS
+        </span>
 
-            <div>
+        <h2
+          id="experiencias-title"
+          className="mt-5 font-serif text-[clamp(3.5rem,7vw,7rem)] leading-none tracking-[-0.05em]"
+        >
+          MOMENTOS
+        </h2>
+      </div>
 
-              <span className="text-[10px] tracking-[0.35em] text-white/35">
-                04 / EXPERIÊNCIAS
-              </span>
+    </div>
 
-              <h2
-  id="experiencias-title"
-  className="mt-5 font-serif text-[clamp(3.5rem,7vw,7rem)] leading-none tracking-[-0.05em]"
->
-  MOMENTOS
-</h2>
+    <div className="overflow-hidden bg-[#101010]">
 
-            </div>
+      <div className="relative aspect-[16/9] w-full bg-black">
 
-            <p className="max-w-[350px] text-[13px] leading-6 text-white/40">
-              Cada evento é pensado para
-              criar presença, conexão e uma
-              experiência que continua depois
-              que as luzes se apagam.
-            </p>
+        <video
+          src="/videos/momentos.mp4"
+          controls
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
 
-          </div>
+      </div>
 
-          <div className="grid gap-5 md:grid-cols-2">
+      <div className="border-t border-white/10 px-6 py-6 md:px-8 md:py-7">
 
-            <motion.div
-  initial={{
-    opacity: 0,
-    y: 30,
-  }}
-  whileInView={{
-    opacity: 1,
-    y: 0,
-  }}
-  viewport={{
-    once: true,
-  }}
-  transition={{
-    duration: 0.8,
-  }}
-  className="group relative aspect-[16/9] overflow-hidden bg-[#101010] md:col-span-2"
->
-  <video
-  src="/videos/momentos.mp4"
-  controls
-  playsInline
-  preload="metadata"
-  className="absolute inset-0 z-10 h-full w-full object-cover"
-/>
+        <span className="text-[9px] tracking-[0.3em] text-white/40">
+          EXPERIÊNCIA EMANUÀH
+        </span>
 
-<div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/90 via-black/30 to-transparent px-8 pb-8 pt-20 md:px-10 md:pb-10">
-  <span className="text-[9px] tracking-[0.3em] text-white/50">
-    EXPERIÊNCIA EMANUÀH
-  </span>
+        <h3 className="mt-2 font-serif text-2xl text-white md:text-3xl">
+          Momentos que permanecem.
+        </h3>
 
-  <h3 className="mt-3 font-serif text-3xl md:text-4xl">
-    Momentos que permanecem.
-  </h3>
-</div>
-</motion.div>
+      </div>
 
-          </div>
+    </div>
 
-        </div>
-
-      </section>
+  </div>
+</section>
 
       {/* =========================================================
           AGENDAMENTOS
