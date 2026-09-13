@@ -23,10 +23,10 @@ export const metadata: Metadata = {
   },
 
   verification: {
-  other: {
-    "msvalidate.01": "26201F20C306F2871A26C34471213823",
+    other: {
+      "msvalidate.01": "26201F20C306F2871A26C34471213823",
+    },
   },
-},
 
   description:
     "Emanuàh Group atua com assessoria artística, gestão de talentos, booking e produção de eventos, conectando artistas, eventos e experiências.",
@@ -121,6 +121,13 @@ export default function RootLayout({
         " h-full antialiased"
       }
     >
+      <head>
+        <meta
+          name="msvalidate.01"
+          content="26201F20C306F2871A26C34471213823"
+        />
+      </head>
+
       <body className="min-h-full flex flex-col">
         <script
           type="application/ld+json"
