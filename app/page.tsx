@@ -720,9 +720,8 @@ const { scrollYProgress: manifestoProgress } = useScroll({
 
           {/* CARROSSEL DO HERO */}
 
-          <div className="relative mt-10 h-[560px] w-full lg:mt-0 lg:h-[88vh] lg:w-[52%]">
-
-            <AnimatePresence mode="sync">
+          <div className="relative mt-10 h-[500px] w-full sm:h-[560px] lg:mt-0 lg:h-[88vh] lg:w-[52%]">
+  <AnimatePresence mode="sync">
 
               <motion.div
                 key={`background-${currentSlide}`}
@@ -830,7 +829,7 @@ const { scrollYProgress: manifestoProgress } = useScroll({
 
             <div className="absolute bottom-0 left-0 right-0 z-20 p-6 sm:p-8 lg:p-10">
 
-              <div className="flex items-end justify-between gap-6">
+              <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
 
                 <AnimatePresence mode="wait">
 
@@ -881,7 +880,7 @@ const { scrollYProgress: manifestoProgress } = useScroll({
 
                 </AnimatePresence>
 
-                <div className="flex shrink-0 flex-col items-end gap-4">
+                <div className="flex shrink-0 flex-row items-center justify-between gap-4 sm:flex-col sm:items-end">
 
                   <span className="text-[10px] tracking-[0.25em] text-white/50">
                     {
@@ -1443,15 +1442,15 @@ const { scrollYProgress: manifestoProgress } = useScroll({
   loop
   playsInline
   preload="metadata"
-  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+  className="absolute inset-0 z-10 h-full w-full object-cover"
 />
 
-  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+<div className="pointer-events-none absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
 
-  <div className="absolute bottom-0 left-0 p-8 md:p-10">
-    <span className="text-[9px] tracking-[0.3em] text-white/50">
-      EXPERIÊNCIA EMANUÀH
-    </span>
+<div className="pointer-events-none absolute bottom-0 left-0 z-20 p-8 md:p-10">
+  <span className="text-[9px] tracking-[0.3em] text-white/50">
+    EXPERIÊNCIA EMANUÀH
+  </span>
 
     <h3 className="mt-3 font-serif text-3xl md:text-4xl">
       Momentos que permanecem.
