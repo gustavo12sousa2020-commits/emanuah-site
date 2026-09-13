@@ -149,10 +149,11 @@ const services = [
     text: "Conexão entre artistas, eventos, igrejas, produtores e oportunidades profissionais.",
   },
   {
-    number: "03",
-    title: "Produção de eventos",
-    text: "Planejamento, organização e execução de eventos com artistas e talentos.",
-  },
+  number: "03",
+  title: "Produção de eventos",
+  text: "Planejamento, organização e execução de eventos com artistas e talentos.",
+  video: true,
+},
   {
     number: "04",
     title: "Conteúdo & audiovisual",
@@ -1271,93 +1272,130 @@ const { scrollYProgress: manifestoProgress } = useScroll({
       </section>
 
       {/* =========================================================
-          SERVIÇOS
-      ========================================================= */}
+    SERVIÇOS
+========================================================= */}
 
-      <section
+<section
   id="servicos"
   aria-labelledby="servicos-title"
   className="relative border-t border-white/[0.08] py-32 lg:py-44"
 >
+  <div className="mx-auto max-w-[1400px] px-6 lg:px-14">
+    <div className="grid gap-16 lg:grid-cols-[0.65fr_1.35fr]">
 
-        <div className="mx-auto max-w-[1400px] px-6 lg:px-14">
+      <div>
+        <span className="text-[10px] tracking-[0.35em] text-white/35">
+          03 / SERVIÇOS
+        </span>
 
-          <div className="grid gap-16 lg:grid-cols-[0.65fr_1.35fr]">
+        <h2
+          id="servicos-title"
+          className="mt-5 max-w-[500px] font-serif text-[clamp(3.5rem,6vw,6rem)] leading-[0.9] tracking-[-0.05em]"
+        >
+          TUDO QUE
+          <br />
 
-            <div>
+          <span className="text-white/40">
+            SUSTENTA
+          </span>
 
-              <span className="text-[10px] tracking-[0.35em] text-white/35">
-                03 / SERVIÇOS
+          <br />
+
+          O TALENTO.
+        </h2>
+      </div>
+
+      <div className="border-t border-white/10">
+        {services.map((service, index) => (
+          <motion.div
+            key={service.title}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{
+              once: true,
+              amount: 0.1,
+            }}
+            variants={fadeUp}
+            transition={{
+              delay: index * 0.05,
+            }}
+            className="group border-b border-white/10 py-8"
+          >
+            <div className="grid gap-6 md:grid-cols-[60px_1fr_1fr_auto] md:items-start">
+
+              <span className="text-[10px] tracking-[0.2em] text-white/30">
+                {service.number}
               </span>
 
-              <h2
-  id="servicos-title"
-  className="mt-5 max-w-[500px] font-serif text-[clamp(3.5rem,6vw,6rem)] leading-[0.9] tracking-[-0.05em]"
->
+              <h3 className="font-serif text-3xl tracking-[-0.025em]">
+                {service.title}
+              </h3>
 
-                TUDO QUE
-                <br />
+              <p className="max-w-[330px] text-[13px] leading-6 text-white/40">
+                {service.text}
+              </p>
 
-                <span className="text-white/40">
-                  SUSTENTA
-                </span>
-
-                <br />
-
-                O TALENTO.
-
-              </h2>
+              <ArrowUpRight
+                size={19}
+                strokeWidth={1}
+                className="text-white/20 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-white"
+              />
 
             </div>
 
-            <div className="border-t border-white/10">
+            {service.video && (
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  y: 20,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                  amount: 0.15,
+                }}
+                transition={{
+                  duration: 0.7,
+                  delay: 0.1,
+                }}
+                className="mt-8 overflow-hidden border border-white/[0.10] bg-[#0b0b0b]"
+              >
+                <div className="relative aspect-video w-full bg-black">
+                  <video
+                    src="/videos/momentos.mp4"
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                </div>
 
-              {services.map(
-                (service, index) => (
-                  <motion.div
-                    key={service.title}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{
-                      once: true,
-                      amount: 0.1,
-                    }}
-                    variants={fadeUp}
-                    transition={{
-                      delay: index * 0.05,
-                    }}
-                    className="group grid gap-6 border-b border-white/10 py-8 md:grid-cols-[60px_1fr_1fr_auto] md:items-start"
-                  >
+                <div className="border-t border-white/10 px-5 py-5 sm:px-7 sm:py-6">
+                  <span className="text-[9px] tracking-[0.3em] text-white/35">
+                    PRODUÇÃO DE EVENTOS
+                  </span>
 
-                    <span className="text-[10px] tracking-[0.2em] text-white/30">
-                      {service.number}
-                    </span>
+                  <h4 className="mt-2 font-serif text-2xl tracking-[-0.03em] text-white sm:text-3xl">
+                    Experiências que permanecem.
+                  </h4>
 
-                    <h3 className="font-serif text-3xl tracking-[-0.025em]">
-                      {service.title}
-                    </h3>
+                  <p className="mt-3 max-w-[600px] text-[12px] leading-6 text-white/35">
+                    Um olhar sobre momentos, eventos e experiências
+                    produzidas com artistas e talentos da Emanuàh Group.
+                  </p>
+                </div>
+              </motion.div>
+            )}
+          </motion.div>
+        ))}
+      </div>
 
-                    <p className="max-w-[330px] text-[13px] leading-6 text-white/40">
-                      {service.text}
-                    </p>
-
-                    <ArrowUpRight
-                      size={19}
-                      strokeWidth={1}
-                      className="text-white/20 transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-white"
-                    />
-
-                  </motion.div>
-                )
-              )}
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
+    </div>
+  </div>
+</section>
 
       {/* =========================================================
           AGENDAMENTOS
