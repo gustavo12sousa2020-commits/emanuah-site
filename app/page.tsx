@@ -1439,23 +1439,20 @@ const { scrollYProgress: manifestoProgress } = useScroll({
   <video
   src="/videos/momentos.mp4"
   controls
-  loop
   playsInline
   preload="metadata"
   className="absolute inset-0 z-10 h-full w-full object-cover"
 />
 
-<div className="pointer-events-none absolute inset-0 z-20 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
-
-<div className="pointer-events-none absolute bottom-0 left-0 z-20 p-8 md:p-10">
+<div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/90 via-black/30 to-transparent px-8 pb-8 pt-20 md:px-10 md:pb-10">
   <span className="text-[9px] tracking-[0.3em] text-white/50">
     EXPERIÊNCIA EMANUÀH
   </span>
 
-    <h3 className="mt-3 font-serif text-3xl md:text-4xl">
-      Momentos que permanecem.
-    </h3>
-  </div>
+  <h3 className="mt-3 font-serif text-3xl md:text-4xl">
+    Momentos que permanecem.
+  </h3>
+</div>
 </motion.div>
 
           </div>
