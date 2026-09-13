@@ -141,27 +141,27 @@ const services = [
   {
     number: "01",
     title: "Gestão artística",
-    text: "Estratégia, organização e acompanhamento para transformar talento em carreira.",
+    text: "Estratégia, organização e acompanhamento de artistas para transformar talento em carreira.",
   },
   {
     number: "02",
-    title: "Booking",
-    text: "Conexão entre artistas, eventos, igrejas, produtores e oportunidades.",
+    title: "Booking artístico",
+    text: "Conexão entre artistas, eventos, igrejas, produtores e oportunidades profissionais.",
   },
   {
     number: "03",
     title: "Produção de eventos",
-    text: "Estrutura, planejamento e execução para experiências marcantes.",
+    text: "Planejamento, organização e execução de eventos com artistas e talentos.",
   },
   {
     number: "04",
     title: "Conteúdo & audiovisual",
-    text: "Registro e desenvolvimento de conteúdo para fortalecer a presença artística.",
+    text: "Produção de conteúdo e registros audiovisuais para fortalecer a presença artística.",
   },
   {
     number: "05",
     title: "Desenvolvimento artístico",
-    text: "Posicionamento, identidade, repertório e direção para cada etapa.",
+    text: "Posicionamento, identidade, repertório e direção para cada etapa da carreira.",
   },
 ];
 
@@ -329,6 +329,34 @@ const { scrollYProgress: manifestoProgress } = useScroll({
     <main className="min-h-screen overflow-x-hidden bg-[#050505] text-white">
 
       {/* =========================================================
+    CONTEXTO INSTITUCIONAL
+========================================================= */}
+
+<section
+  aria-labelledby="empresa-title"
+  className="sr-only"
+>
+  <h2 id="empresa-title">Emanuàh Group</h2>
+
+  <p>
+  
+  </p>
+
+  <p>
+    A Emanuàh Group conecta talentos a projetos e experiências,
+    oferecendo assessoria artística, gestão de talentos, booking
+    artístico, produção de eventos, desenvolvimento artístico e
+    conteúdo audiovisual.
+  </p>
+
+  <p>
+    A atuação da Emanuàh Group inclui shows, apresentações,
+    cultos, congressos, ministrações, palestras e outros eventos
+    que precisam de artistas e profissionais preparados.
+  </p>
+</section>
+
+      {/* =========================================================
           SCROLL PROGRESS
       ========================================================= */}
 
@@ -371,7 +399,7 @@ const { scrollYProgress: manifestoProgress } = useScroll({
               <div className="relative h-[58px] w-[150px]">
                 <Image
                   src="/logo/emanuah-logo-recortado.png"
-                  alt="Emanuah Group"
+                  alt="Emanuàh Group"
                   fill
                   priority
                   sizes="150px"
@@ -781,11 +809,7 @@ const { scrollYProgress: manifestoProgress } = useScroll({
                       currentSlide
                     ].image
                   }
-                  alt={
-                    carouselArtists[
-                      currentSlide
-                    ].name
-                  }
+                  alt={`Emanuàh Group - ${carouselArtists[currentSlide].name}`}
                   fill
                   priority={currentSlide === 0}
                   sizes="(max-width: 1024px) 100vw, 48vw"
@@ -1123,9 +1147,10 @@ const { scrollYProgress: manifestoProgress } = useScroll({
       ========================================================= */}
 
       <section
-        id="artistas"
-        className="relative overflow-hidden border-t border-white/[0.08] py-32 lg:py-44"
-      >
+  id="artistas"
+  aria-labelledby="artistas-title"
+  className="relative overflow-hidden border-t border-white/[0.08] py-32 lg:py-44"
+>
 
         <div className="mx-auto max-w-[1400px] px-6 lg:px-14">
 
@@ -1137,9 +1162,12 @@ const { scrollYProgress: manifestoProgress } = useScroll({
                 02 / ARTISTAS
               </span>
 
-              <h2 className="mt-5 font-serif text-[clamp(3.5rem,7vw,7rem)] leading-none tracking-[-0.05em]">
-                ROSTER
-              </h2>
+              <h2
+  id="artistas-title"
+  className="mt-5 font-serif text-[clamp(3.5rem,7vw,7rem)] leading-none tracking-[-0.05em]"
+>
+  ROSTER
+</h2>
 
             </div>
 
@@ -1207,7 +1235,7 @@ const { scrollYProgress: manifestoProgress } = useScroll({
 
                     <Image
                       src={artist.image}
-                      alt={artist.name}
+                      alt={`Emanuàh Group - ${artist.name}`}
                       fill
                       sizes="(max-width: 640px) 82vw, (max-width: 1024px) 55vw, 430px"
                       className={`${artist.imageClass} artist-card-image transition-transform duration-700 group-hover:scale-[1.045]`}
@@ -1268,9 +1296,10 @@ const { scrollYProgress: manifestoProgress } = useScroll({
       ========================================================= */}
 
       <section
-        id="servicos"
-        className="relative border-t border-white/[0.08] py-32 lg:py-44"
-      >
+  id="servicos"
+  aria-labelledby="servicos-title"
+  className="relative border-t border-white/[0.08] py-32 lg:py-44"
+>
 
         <div className="mx-auto max-w-[1400px] px-6 lg:px-14">
 
@@ -1282,7 +1311,10 @@ const { scrollYProgress: manifestoProgress } = useScroll({
                 03 / SERVIÇOS
               </span>
 
-              <h2 className="mt-5 max-w-[500px] font-serif text-[clamp(3.5rem,6vw,6rem)] leading-[0.9] tracking-[-0.05em]">
+              <h2
+  id="servicos-title"
+  className="mt-5 max-w-[500px] font-serif text-[clamp(3.5rem,6vw,6rem)] leading-[0.9] tracking-[-0.05em]"
+>
 
                 TUDO QUE
                 <br />
@@ -1353,9 +1385,10 @@ const { scrollYProgress: manifestoProgress } = useScroll({
       ========================================================= */}
 
       <section
-        id="experiencias"
-        className="relative border-t border-white/[0.08] py-32 lg:py-44"
-      >
+  id="experiencias"
+  aria-labelledby="experiencias-title"
+  className="relative border-t border-white/[0.08] py-32 lg:py-44"
+>
 
         <div className="mx-auto max-w-[1400px] px-6 lg:px-14">
 
@@ -1367,9 +1400,12 @@ const { scrollYProgress: manifestoProgress } = useScroll({
                 04 / EXPERIÊNCIAS
               </span>
 
-              <h2 className="mt-5 font-serif text-[clamp(3.5rem,7vw,7rem)] leading-none tracking-[-0.05em]">
-                MOMENTOS
-              </h2>
+              <h2
+  id="experiencias-title"
+  className="mt-5 font-serif text-[clamp(3.5rem,7vw,7rem)] leading-none tracking-[-0.05em]"
+>
+  MOMENTOS
+</h2>
 
             </div>
 
@@ -1472,9 +1508,10 @@ const { scrollYProgress: manifestoProgress } = useScroll({
       ========================================================= */}
 
       <section
-        id="agendamento"
-        className="relative overflow-hidden border-t border-white/[0.08] bg-[#050505]"
-      >
+  id="agendamento"
+  aria-labelledby="agendamento-title"
+  className="relative overflow-hidden border-t border-white/[0.08] bg-[#050505]"
+>
 
         <div className="pointer-events-none absolute -right-40 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full border border-white/[0.04]" />
 
@@ -1514,7 +1551,10 @@ const { scrollYProgress: manifestoProgress } = useScroll({
 
               </div>
 
-              <h2 className="max-w-[800px] text-[clamp(3rem,7vw,7rem)] font-medium leading-[0.88] tracking-[-0.06em] text-white">
+              <h2
+  id="agendamento-title"
+  className="max-w-[800px] text-[clamp(3rem,7vw,7rem)] font-medium leading-[0.88] tracking-[-0.06em] text-white"
+>
 
                 Seu próximo
                 <br />
