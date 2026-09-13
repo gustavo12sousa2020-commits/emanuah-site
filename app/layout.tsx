@@ -22,6 +22,12 @@ export const metadata: Metadata = {
     template: "%s | Emanuàh Group",
   },
 
+  verification: {
+  other: {
+    "msvalidate.01": "26201F20C306F2871A26C34471213823",
+  },
+},
+
   description:
     "Emanuàh Group atua com assessoria artística, gestão de talentos, booking e produção de eventos, conectando artistas, eventos e experiências.",
 
