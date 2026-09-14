@@ -240,7 +240,7 @@ export default function Home() {
         (current) =>
           (current + 1) % carouselArtists.length
       );
-    }, 6000);
+    }, 4000);
 
     return () => window.clearInterval(timer);
   }, []);
@@ -729,7 +729,7 @@ export default function Home() {
                   x: -30,
                 }}
                 transition={{
-                  duration: 0.75,
+                  duration: 0.5,
                   ease: [
                     0.22,
                     1,
