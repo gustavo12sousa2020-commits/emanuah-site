@@ -1592,6 +1592,22 @@ export default function Home() {
           FOOTER
       ========================================================= */}
 
+<div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-[10px] tracking-[0.18em] text-white/30">
+  <a
+    href="/privacidade"
+    className="transition hover:text-white"
+  >
+    PRIVACIDADE
+  </a>
+
+  <a
+    href="/termos"
+    className="transition hover:text-white"
+  >
+    TERMOS DE USO
+  </a>
+</div>
+
       <footer className="border-t border-white/[0.08]">
 
         <div className="mx-auto max-w-[1400px] px-6 py-10 lg:px-14">
