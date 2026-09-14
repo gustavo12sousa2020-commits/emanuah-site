@@ -553,81 +553,81 @@ export default function Home() {
             >
 
               <motion.span
-                variants={{
-                  hidden: {
-                    opacity: 0,
-                    y: 30,
-                  },
-                  visible: {
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                      duration: 0.7,
-                      ease: [
-                        0.22,
-                        1,
-                        0.36,
-                        1,
-                      ] as const,
-                    },
-                  },
-                }}
-                className="block hero-word"
-              >
-                TALENTO
-              </motion.span>
+  variants={{
+    hidden: {
+      opacity: 0,
+      y: 30,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.7,
+        ease: [
+          0.22,
+          1,
+          0.36,
+          1,
+        ] as const,
+      },
+    },
+  }}
+  className="block hero-word"
+>
+  AQUI
+</motion.span>
 
-              <motion.span
-                variants={{
-                  hidden: {
-                    opacity: 0,
-                    y: 30,
-                  },
-                  visible: {
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                      duration: 0.7,
-                      ease: [
-                        0.22,
-                        1,
-                        0.36,
-                        1,
-                      ] as const,
-                    },
-                  },
-                }}
-                className="block hero-word"
-              >
-                <em className="font-serif font-normal">
-                  ganha
-                </em>
-              </motion.span>
+<motion.span
+  variants={{
+    hidden: {
+      opacity: 0,
+      y: 30,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.7,
+        ease: [
+          0.22,
+          1,
+          0.36,
+          1,
+        ] as const,
+      },
+    },
+  }}
+  className="block hero-word"
+>
+  TALENTO
+</motion.span>
 
-              <motion.span
-                variants={{
-                  hidden: {
-                    opacity: 0,
-                    y: 30,
-                  },
-                  visible: {
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                      duration: 0.7,
-                      ease: [
-                        0.22,
-                        1,
-                        0.36,
-                        1,
-                      ] as const,
-                    },
-                  },
-                }}
-                className="block hero-word"
-              >
-                DIREÇÃO.
-              </motion.span>
+<motion.span
+  variants={{
+    hidden: {
+      opacity: 0,
+      y: 30,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.7,
+        ease: [
+          0.22,
+          1,
+          0.36,
+          1,
+        ] as const,
+      },
+    },
+  }}
+  className="block hero-word"
+>
+  <em className="font-serif font-normal">
+    GANHA DIREÇÃO.
+  </em>
+</motion.span>
 
             </motion.h1>
 
@@ -972,13 +972,28 @@ export default function Home() {
 
             <div className="w-full max-w-[1200px] min-w-0 overflow-hidden">
 
-              <p
-                aria-label={manifestoText}
-                className="font-serif text-[clamp(2.8rem,12vw,5rem)] font-medium leading-[0.92] tracking-[-0.055em] lg:text-[clamp(3.2rem,6.5vw,7rem)]"
-              >
-                {manifestoText}
-
-              </p>
+              <motion.p
+  initial={{
+    opacity: 0,
+    y: 18,
+  }}
+  whileInView={{
+    opacity: 1,
+    y: 0,
+  }}
+  viewport={{
+    once: true,
+    amount: 0.25,
+  }}
+  transition={{
+    duration: 0.55,
+    ease: [0.22, 1, 0.36, 1] as const,
+  }}
+  aria-label={manifestoText}
+  className="font-serif text-[clamp(2.8rem,12vw,5rem)] font-medium leading-[0.92] tracking-[-0.055em] lg:text-[clamp(3.2rem,6.5vw,7rem)]"
+>
+  {manifestoText}
+</motion.p>
 
             </div>
 
