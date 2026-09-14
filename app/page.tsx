@@ -1232,20 +1232,20 @@ export default function Home() {
         </span>
 
         <h2
-          id="servicos-title"
-          className="mt-5 max-w-[500px] font-serif text-[clamp(3.5rem,6vw,6rem)] leading-[0.9] tracking-[-0.05em]"
-        >
-          TUDO QUE
-          <br />
+  id="servicos-title"
+  className="mt-5 max-w-[500px] font-serif text-[clamp(3.5rem,6vw,6rem)] leading-[0.9] tracking-[-0.05em]"
+>
+  TEMOS TUDO
+  <br />
 
-          <span className="text-white/40">
-            SUSTENTA
-          </span>
+  <span className="text-white/40">
+    QUE SUSTENTA
+  </span>
 
-          <br />
+  <br />
 
-          O TALENTO.
-        </h2>
+  O TALENTO.
+</h2>
       </div>
 
       <div className="border-t border-white/10">
