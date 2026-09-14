@@ -1,13 +1,10 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import {
   motion,
   AnimatePresence,
-  useScroll,
-  useTransform,
-  type MotionValue,
 } from "framer-motion";
 import {
   ArrowDown,
@@ -184,33 +181,6 @@ const fadeUp = {
   },
 };
 
-function ManifestoCharacter({
-  character,
-  index,
-  total,
-  progress,
-}: {
-  character: string;
-  index: number;
-  total: number;
-  progress: MotionValue<number>;
-}) {
-  const start = index / total;
-  const end = (index + 1) / total;
-
-  const opacity = useTransform(
-    progress,
-    [start, end],
-    [0, 1]
-  );
-
-  return (
-    <motion.span style={{ opacity }}>
-      {character === " " ? " " : character}
-    </motion.span>
-  );
-}
-
 export default function Home() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -219,19 +189,6 @@ export default function Home() {
     x: 0,
     y: 0,
   });
-
-  const manifestoRef = useRef<HTMLElement | null>(null);
-
-const { scrollYProgress: manifestoProgress } = useScroll({
-  target: manifestoRef,
-  offset: ["start 85%", "end 70%"],
-});
-
-  const cursorOpacity = useTransform(
-    manifestoProgress,
-    [0, 0.95],
-    [1, 0]
-  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -945,7 +902,6 @@ const { scrollYProgress: manifestoProgress } = useScroll({
       ========================================================= */}
 
       <section
-  ref={manifestoRef}
   id="sobre"
   className="relative min-h-[680px] w-full max-w-full overflow-hidden border-t border-white/[0.08] sm:min-h-[750px] lg:min-h-[850px]"
 >
@@ -1020,35 +976,7 @@ const { scrollYProgress: manifestoProgress } = useScroll({
                 aria-label={manifestoText}
                 className="font-serif text-[clamp(2.8rem,12vw,5rem)] font-medium leading-[0.92] tracking-[-0.055em] lg:text-[clamp(3.2rem,6.5vw,7rem)]"
               >
-
-                {manifestoText
-                  .split("")
-                  .map(
-                    (
-                      character,
-                      index
-                    ) => (
-                      <ManifestoCharacter
-                        key={`${character}-${index}`}
-                        character={character}
-                        index={index}
-                        total={
-                          manifestoText.length
-                        }
-                        progress={
-                          manifestoProgress
-                        }
-                      />
-                    )
-                  )}
-
-                <motion.span
-                  className="ml-1 inline-block h-[0.8em] w-[2px] translate-y-[0.08em] bg-white/70"
-                  style={{
-                    opacity:
-                      cursorOpacity,
-                  }}
-                />
+                {manifestoText}
 
               </p>
 
