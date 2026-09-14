@@ -1231,21 +1231,42 @@ export default function Home() {
           03 / SERVIÇOS
         </span>
 
-        <h2
+        <motion.h2
   id="servicos-title"
-  className="mt-5 max-w-[500px] font-serif text-[clamp(3.5rem,6vw,6rem)] leading-[0.9] tracking-[-0.05em]"
+  initial={{
+    opacity: 0,
+    y: 20,
+  }}
+  whileInView={{
+    opacity: 1,
+    y: 0,
+  }}
+  viewport={{
+    once: true,
+    amount: 0.25,
+  }}
+  transition={{
+    duration: 0.7,
+    ease: [0.22, 1, 0.36, 1] as const,
+  }}
+  className="services-title mt-5 max-w-[500px] font-serif text-[clamp(3.5rem,6vw,6rem)] font-medium leading-[0.9] tracking-[-0.05em]"
 >
-  TEMOS TUDO
+  <span className="services-line services-line-1">
+    TEMOS TUDO
+  </span>
+
   <br />
 
-  <span className="text-white/40">
+  <span className="services-line services-line-2">
     QUE SUSTENTA
   </span>
 
   <br />
 
-  O TALENTO.
-</h2>
+  <span className="services-line services-line-3">
+    O TALENTO.
+  </span>
+</motion.h2>
       </div>
 
       <div className="border-t border-white/10">
@@ -1777,6 +1798,74 @@ export default function Home() {
           opacity: 1;
           transform: translateX(100%);
         }
+
+.services-title {
+  text-wrap: balance;
+}
+
+.services-line {
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  transition:
+    background-position 900ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 500ms ease,
+    transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* TEMOS TUDO */
+.services-line-1 {
+  background-image: linear-gradient(
+    100deg,
+    #ffffff 0%,
+    #f7f7f7 45%,
+    #d9d9d9 100%
+  );
+}
+
+/* QUE SUSTENTA */
+.services-line-2 {
+  background-image: linear-gradient(
+    100deg,
+    #eeeeee 0%,
+    #a7a7a7 45%,
+    #d2c5b2 100%
+  );
+}
+
+/* O TALENTO */
+.services-line-3 {
+  background-image: linear-gradient(
+    100deg,
+    #d8d0c5 0%,
+    #c8a96b 35%,
+    #e8c982 65%,
+    #f4dca8 100%
+  );
+}
+
+.services-title:hover .services-line {
+  background-position: 100% 50%;
+}
+
+.services-title:hover .services-line-1 {
+  filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.08));
+}
+
+.services-title:hover .services-line-2 {
+  filter: drop-shadow(0 0 18px rgba(220, 205, 185, 0.08));
+}
+
+.services-title:hover .services-line-3 {
+  filter: drop-shadow(0 0 22px rgba(235, 210, 170, 0.12));
+}
+
+.services-title:hover .services-line-3 {
+  transform: translateX(3px);
+}
 
 @media (max-width: 640px) {
   .hero-word:hover {

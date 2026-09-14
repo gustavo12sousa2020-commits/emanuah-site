@@ -89,6 +89,11 @@ export const metadata: Metadata = {
   },
 
   category: "business",
+    icons: {
+    icon: "/logo/emanuah-favicon.png",
+    shortcut: "/logo/emanuah-favicon.png",
+    apple: "/logo/emanuah-favicon.png",
+  },
 };
 
 const organizationSchema = {
