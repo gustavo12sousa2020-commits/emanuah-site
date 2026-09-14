@@ -224,7 +224,7 @@ export default function Home() {
 
 const { scrollYProgress: manifestoProgress } = useScroll({
   target: manifestoRef,
-  offset: ["start 85%", "end 35%"],
+  offset: ["start 85%", "end 70%"],
 });
 
   const cursorOpacity = useTransform(
