@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
   title: {
-    default: "Emanuàh Group | Assessoria Artística & Gestão de Talentos",
+    default: "Emanuàh Group | Assessoria Artística & Produção de Eventos",
     template: "%s | Emanuàh Group",
   },
 
@@ -29,13 +29,12 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Emanuàh Group atua com assessoria artística, gestão de talentos, booking e produção de eventos, conectando artistas, eventos e experiências.",
+    "Emanuàh Group atua com assessoria artística e produção de eventos, conectando artistas, eventos e experiências.",
 
   keywords: [
     "Emanuàh Group",
     "Emanuah Group",
     "assessoria artística",
-    "gestão de talentos",
     "produção de eventos",
     "agenciamento artístico",
     "booking artístico",
@@ -76,21 +75,21 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: SITE_URL,
     siteName: "Emanuàh Group",
-    title: "Emanuàh Group | Assessoria Artística & Gestão de Talentos",
+    title: "Emanuàh Group | Assessoria Artística & Produção de Eventos",
     description:
-      "Assessoria artística, gestão de talentos, booking e produção de eventos.",
+      "Assessoria artística e produção de eventos, conectando artistas, eventos e experiências.",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Emanuàh Group | Assessoria Artística & Gestão de Talentos",
+    title: "Emanuàh Group | Assessoria Artística & Produção de Eventos",
     description:
-      "Assessoria artística, gestão de talentos, booking e produção de eventos.",
+      "Assessoria artística e produção de eventos, conectando artistas, eventos e experiências.",
   },
 
   category: "business",
-  
-    icons: {
+
+  icons: {
     icon: "/logo/emanuah-favicon.png",
     shortcut: "/logo/emanuah-favicon.png",
     apple: "/logo/emanuah-favicon.png",
@@ -104,7 +103,7 @@ const organizationSchema = {
   alternateName: "Emanuah Group",
   url: SITE_URL,
   description:
-    "Assessoria artística, gestão de talentos, booking e produção de eventos.",
+    "Assessoria artística e produção de eventos, conectando artistas, eventos e experiências.",
   sameAs: ["https://www.instagram.com/emanuahoficial/"],
   contactPoint: {
     "@type": "ContactPoint",
