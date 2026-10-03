@@ -72,6 +72,30 @@ const artists = [
     image: "/weslay.png",
     imageClass: "object-cover object-center",
   },
+  {
+    number: "08",
+    name: "Amanda Ferrari",
+    role: "CANTORA",
+    description: "Cantora, compositora e adoradora",
+    image: "/amanda-ferrari.jpg",
+    imageClass: "object-cover object-center",
+  },
+  {
+    number: "09",
+    name: "Jonas Villar",
+    role: "CANTOR",
+    description: "Pastor, cantor, compositor e intérprete",
+    image: "/jonas-villar.jpg",
+    imageClass: "object-cover object-center",
+  },
+  {
+    number: "10",
+    name: "Samuel Eleotério",
+    role: "CANTOR",
+    description: "Cantor pentecostal e compositor",
+    image: "/samuel-eleoterio.jpg",
+    imageClass: "object-cover object-center",
+  },
 ];
 
 const WHATSAPP_BASE = "https://wa.me/5511945065689";
@@ -132,34 +156,26 @@ const carouselArtists = [
     description: "Música",
     image: "/carousel/waslay.jpg",
   },
-];
-
-const services = [
   {
-    number: "01",
-    title: "Gestão artística",
-    text: "Estratégia, organização e acompanhamento de artistas para transformar talento em carreira.",
+    number: "08",
+    name: "Amanda Ferrari",
+    role: "CANTORA",
+    description: "Cantora, compositora e adoradora",
+    image: "/amanda-ferrari.jpg",
   },
   {
-    number: "02",
-    title: "Booking artístico",
-    text: "Conexão entre artistas, eventos, igrejas, produtores e oportunidades profissionais.",
+    number: "09",
+    name: "Jonas Villar",
+    role: "CANTOR",
+    description: "Pastor, cantor, compositor e intérprete",
+    image: "/jonas-villar.jpg",
   },
   {
-  number: "03",
-  title: "Produção de eventos",
-  text: "Planejamento, organização e execução de eventos com artistas e talentos.",
-  video: true,
-},
-  {
-    number: "04",
-    title: "Conteúdo & audiovisual",
-    text: "Produção de conteúdo e registros audiovisuais para fortalecer a presença artística.",
-  },
-  {
-    number: "05",
-    title: "Desenvolvimento artístico",
-    text: "Posicionamento, identidade, repertório e direção para cada etapa da carreira.",
+    number: "10",
+    name: "Samuel Eleotério",
+    role: "CANTOR",
+    description: "Cantor pentecostal e compositor",
+    image: "/samuel-eleoterio.jpg",
   },
 ];
 
@@ -180,6 +196,39 @@ const fadeUp = {
     },
   },
 };
+
+const services = [
+  {
+    number: "01",
+    title: "GESTÃO DE CARREIRA",
+    text: "Estratégia, planejamento e direcionamento para fortalecer a trajetória e o posicionamento do artista.",
+    video: "",
+  },
+  {
+    number: "02",
+    title: "BOOKING",
+    text: "Conexão entre artistas e contratantes para shows, eventos, congressos e ministrações.",
+    video: "",
+  },
+  {
+    number: "03",
+    title: "PRODUÇÃO MUSICAL",
+    text: "Desenvolvimento e suporte para projetos musicais, lançamentos e novos trabalhos.",
+    video: "",
+  },
+  {
+    number: "04",
+    title: "MARKETING E DIVULGAÇÃO",
+    text: "Estratégias de comunicação e divulgação para ampliar a presença do artista e seus projetos.",
+    video: "",
+  },
+  {
+    number: "05",
+    title: "EVENTOS E CONGRESSOS",
+    text: "Organização e intermediação de participações em eventos, congressos e grandes programações.",
+    video: "",
+  },
+];
 
 export default function Home() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -821,13 +870,13 @@ export default function Home() {
                 <div className="flex shrink-0 flex-row items-center justify-between gap-4 sm:flex-col sm:items-end">
 
                   <span className="text-[10px] tracking-[0.25em] text-white/50">
-                    {
-                      carouselArtists[
-                        currentSlide
-                      ].number
-                    }{" "}
-                    / 07
-                  </span>
+  {
+    carouselArtists[
+      currentSlide
+    ].number
+  }{" "}
+  / {String(carouselArtists.length).padStart(2, "0")}
+</span>
 
                   <div className="flex gap-2">
 
