@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -18,7 +18,7 @@ import {
 const artists = [
   {
     number: "01",
-    name: "Samuel EleotÃ©rio",
+    name: "Samuel Eleotério",
     role: "CANTOR",
     description: "Cantor pentecostal e compositor",
     image: "/samuel-eleoterio.jpg",
@@ -36,23 +36,23 @@ const artists = [
     number: "03",
     name: "Jonas Villar",
     role: "CANTOR",
-    description: "Pastor, cantor, compositor e intÃ©rprete",
+    description: "Pastor, cantor, compositor e intérprete",
     image: "/jonas-villar.jpg",
     imageClass: "object-cover object-center",
   },
   {
     number: "04",
-    name: "Ev. JoÃ£o Vitor Ota",
+    name: "Ev. João Vitor Ota",
     role: "PRELETOR",
-    description: "PregaÃ§Ãµes",
+    description: "Pregações",
     image: "/ev.joao-vitor-ota.png",
     imageClass: "object-cover object-center",
   },
   {
     number: "05",
-    name: "Edima Ã”mega",
+    name: "Edima Ômega",
     role: "ARTISTA",
-    description: "MÃºsica & PregaÃ§Ã£o",
+    description: "Música & Pregação",
     image: "/odima.png",
     imageClass: "object-cover object-center",
   },
@@ -68,7 +68,7 @@ const artists = [
     number: "07",
     name: "Pr. Wilton Blanco",
     role: "PRELETOR",
-    description: "MinistraÃ§Ã£o & Palestra",
+    description: "Ministração & Palestra",
     image: "/pr.wilton-blanco.png",
     imageClass: "object-cover object-center",
   },
@@ -76,7 +76,7 @@ const artists = [
     number: "08",
     name: "Ester Ota",
     role: "ARTISTA",
-    description: "MÃºsica & MinistraÃ§Ã£o",
+    description: "Música & Ministração",
     image: "/ester-ota.png",
     imageClass: "object-cover object-center",
   },
@@ -84,7 +84,7 @@ const artists = [
     number: "09",
     name: "Pra. Adrielly Ota",
     role: "ARTISTA",
-    description: "MinistraÃ§Ã£o",
+    description: "Ministração",
     image: "/pra-adrielly-ota.png",
     imageClass: "object-cover object-center",
   },
@@ -92,7 +92,7 @@ const artists = [
     number: "10",
     name: "Wesley",
     role: "ARTISTA",
-    description: "MÃºsica",
+    description: "Música",
     image: "/weslay.png",
     imageClass: "object-cover object-center",
   },
@@ -109,7 +109,7 @@ const WHATSAPP_NAV =
 const carouselArtists = [
   {
     number: "01",
-    name: "Samuel EleotÃ©rio",
+    name: "Samuel Eleotério",
     role: "CANTOR",
     description: "Cantor pentecostal e compositor",
     image: "/samuel-eleoterio.jpg",
@@ -125,28 +125,28 @@ const carouselArtists = [
     number: "03",
     name: "Jonas Villar",
     role: "CANTOR",
-    description: "Pastor, cantor, compositor e intÃ©rprete",
+    description: "Pastor, cantor, compositor e intérprete",
     image: "/jonas-villar.jpg",
   },
   {
     number: "04",
-    name: "Ev. JoÃ£o Vitor Ota",
+    name: "Ev. João Vitor Ota",
     role: "PRELETOR",
-    description: "PregaÃ§Ãµes",
+    description: "Pregações",
     image: "/carousel/ev-joao-vitor-ota-carousel.jpg",
   },
   {
     number: "05",
     name: "Pra. Adrielly Ota",
     role: "ARTISTA",
-    description: "MÃºsica & MinistraÃ§Ã£o",
+    description: "Música & Ministração",
     image: "/carousel/pra-adrielly-ota.png",
   },
   {
     number: "06",
     name: "Pr. Wilton Blanco",
     role: "PRELETOR",
-    description: "MinistraÃ§Ã£o & Palestra",
+    description: "Ministração & Palestra",
     image: "/carousel/pr-wilton-blanco-carousel.png",
   },
   {
@@ -158,29 +158,29 @@ const carouselArtists = [
   },
   {
     number: "08",
-    name: "Edima Ã”mega",
+    name: "Edima Ômega",
     role: "ARTISTA",
-    description: "MÃºsica & PregaÃ§Ã£o",
+    description: "Música & Pregação",
     image: "/carousel/edima-omega-carousel.png",
   },
   {
     number: "09",
     name: "Ester Ota",
     role: "ARTISTA",
-    description: "MÃºsica & MinistraÃ§Ã£o",
+    description: "Música & Ministração",
     image: "/carousel/cantora-este-ota.png",
   },
   {
     number: "10",
     name: "Wesley",
     role: "ARTISTA",
-    description: "MÃºsica",
+    description: "Música",
     image: "/carousel/waslay.jpg",
   },
 ];
 
 const manifestoText =
-  "NÃ£o basta ter talento. Ã‰ preciso saber onde levÃ¡-lo.";
+  "Não basta ter talento. É preciso saber onde levá-lo.";
 
 const fadeUp = {
   hidden: {
@@ -200,32 +200,32 @@ const fadeUp = {
 const services = [
   {
     number: "01",
-    title: "GESTÃƒO DE CARREIRA",
-    text: "EstratÃ©gia, planejamento e direcionamento para fortalecer a trajetÃ³ria e o posicionamento do artista.",
+    title: "GESTÃO DE CARREIRA",
+    text: "Estratégia, planejamento e direcionamento para fortalecer a trajetória e o posicionamento do artista.",
     video: "",
   },
   {
     number: "02",
     title: "BOOKING",
-    text: "ConexÃ£o entre artistas e contratantes para shows, eventos, congressos e ministraÃ§Ãµes.",
+    text: "Conexão entre artistas e contratantes para shows, eventos, congressos e ministrações.",
     video: "",
   },
   {
     number: "03",
-    title: "PRODUÃ‡ÃƒO MUSICAL",
-    text: "Desenvolvimento e suporte para projetos musicais, lanÃ§amentos e novos trabalhos.",
+    title: "PRODUÇÃO MUSICAL",
+    text: "Desenvolvimento e suporte para projetos musicais, lançamentos e novos trabalhos.",
     video: "",
   },
   {
     number: "04",
-    title: "MARKETING E DIVULGAÃ‡ÃƒO",
-    text: "EstratÃ©gias de comunicaÃ§Ã£o e divulgaÃ§Ã£o para ampliar a presenÃ§a do artista e seus projetos.",
+    title: "MARKETING E DIVULGAÇÃO",
+    text: "Estratégias de comunicação e divulgação para ampliar a presença do artista e seus projetos.",
     video: "/videos/momentos.mp4",
   },
   {
     number: "05",
     title: "EVENTOS E CONGRESSOS",
-    text: "OrganizaÃ§Ã£o e intermediaÃ§Ã£o de participaÃ§Ãµes em eventos, congressos e grandes programaÃ§Ãµes.",
+    text: "Organização e intermediação de participações em eventos, congressos e grandes programações.",
     video: "",
   },
 ];
@@ -343,18 +343,18 @@ export default function Home() {
   aria-labelledby="empresa-title"
   className="sr-only"
 >
-  <h2 id="empresa-title">EmanuÃ h Group</h2>
+  <h2 id="empresa-title">Emanuàh Group</h2>
 
   <p>
-    A EmanuÃ h Group conecta talentos a projetos e experiÃªncias,
-    oferecendo assessoria artÃ­stica, gestÃ£o de talentos, booking
-    artÃ­stico, produÃ§Ã£o de eventos, desenvolvimento artÃ­stico e
-    conteÃºdo audiovisual.
+    A Emanuàh Group conecta talentos a projetos e experiências,
+    oferecendo assessoria artística, gestão de talentos, booking
+    artístico, produção de eventos, desenvolvimento artístico e
+    conteúdo audiovisual.
   </p>
 
   <p>
-    A atuaÃ§Ã£o da EmanuÃ h Group inclui shows, apresentaÃ§Ãµes,
-    cultos, congressos, ministraÃ§Ãµes, palestras e outros eventos
+    A atuação da Emanuàh Group inclui shows, apresentações,
+    cultos, congressos, ministrações, palestras e outros eventos
     que precisam de artistas e profissionais preparados.
   </p>
 </section>
@@ -397,12 +397,12 @@ export default function Home() {
             <button
               onClick={() => scrollTo("inicio")}
               className="relative z-10 flex items-center"
-              aria-label="Voltar ao inÃ­cio"
+              aria-label="Voltar ao início"
             >
               <div className="relative h-[58px] w-[150px]">
                 <Image
                   src="/logo/emanuah-logo-recortado.png"
-                  alt="EmanuÃ h Group"
+                  alt="Emanuàh Group"
                   fill
                   priority
                   sizes="150px"
@@ -426,7 +426,7 @@ export default function Home() {
                 onClick={() => scrollTo("servicos")}
                 className="nav-link"
               >
-                SERVIÃ‡OS
+                SERVIÇOS
               </button>
 
               <button
@@ -511,7 +511,7 @@ export default function Home() {
                 }
                 className="mobile-nav-link"
               >
-                SERVIÃ‡OS
+                SERVIÇOS
               </button>
 
               <button
@@ -582,7 +582,7 @@ export default function Home() {
               <span className="h-px w-10 bg-white/40" />
 
               <span className="text-[10px] font-medium tracking-[0.35em] text-white/55">
-                GESTÃƒO â€¢ MÃšSICA â€¢ EXPERIÃŠNCIAS
+                GESTÃO • MÚSICA • EXPERIÊNCIAS
               </span>
 
             </div>
@@ -674,7 +674,7 @@ export default function Home() {
   className="block hero-word"
 >
   <em className="font-serif font-normal">
-    GANHA DIREÃ‡ÃƒO.
+    GANHA DIREÇÃO.
   </em>
 </motion.span>
 
@@ -683,9 +683,9 @@ export default function Home() {
             <div className="mt-14 max-w-[430px]">
 
               <p className="text-[14px] leading-7 text-white/45">
-  A EmanuÃ h Group atua com assessoria artÃ­stica, gestÃ£o de talentos,
-  booking e produÃ§Ã£o de eventos, conectando artistas a projetos,
-  eventos e experiÃªncias.
+  A Emanuàh Group atua com assessoria artística, gestão de talentos,
+  booking e produção de eventos, conectando artistas a projetos,
+  eventos e experiências.
 </p>
 
             </div>
@@ -795,7 +795,7 @@ export default function Home() {
                       currentSlide
                     ].image
                   }
-                  alt={`EmanuÃ h Group - ${carouselArtists[currentSlide].name}`}
+                  alt={`Emanuàh Group - ${carouselArtists[currentSlide].name}`}
                   fill
                   priority={currentSlide === 0}
                   sizes="(max-width: 1024px) 100vw, 48vw"
@@ -812,7 +812,7 @@ export default function Home() {
 
             </AnimatePresence>
 
-            {/* INFORMAÃ‡Ã•ES */}
+            {/* INFORMAÇÕES */}
 
             <div className="absolute bottom-0 left-0 right-0 z-20 p-6 sm:p-8 lg:p-10">
 
@@ -895,7 +895,7 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={nextSlide}
-                      aria-label="PrÃ³ximo artista"
+                      aria-label="Próximo artista"
                       className="flex h-10 w-10 items-center justify-center border border-white/20 bg-black/20 text-white/60 backdrop-blur-sm transition-all duration-300 hover:border-white hover:text-white"
                     >
                       <ArrowRight
@@ -981,7 +981,7 @@ export default function Home() {
 
           <Image
             src="/experiencia.jpg"
-            alt="EmanuÃ h Group - gestÃ£o artÃ­stica, eventos e experiÃªncias"
+            alt="Emanuàh Group - gestão artística, eventos e experiências"
             fill
             sizes="100vw"
             className="object-cover object-center opacity-[0.55]"
@@ -1046,7 +1046,7 @@ export default function Home() {
 
             </div>
 
-            {/* DESCRIÃ‡ÃƒO */}
+            {/* DESCRIÇÃO */}
 
             <motion.div
               initial={{
@@ -1069,12 +1069,12 @@ export default function Home() {
 
               <p className="text-[14px] leading-8 text-white/45">
                 A Emanuah trabalha na
-                interseÃ§Ã£o entre gestÃ£o,
-                arte e experiÃªncia.
-                Criamos direÃ§Ã£o para
+                interseção entre gestão,
+                arte e experiência.
+                Criamos direção para
                 artistas e projetos que
                 precisam transformar
-                potencial em presenÃ§a.
+                potencial em presença.
               </p>
 
             </motion.div>
@@ -1103,7 +1103,7 @@ export default function Home() {
               <span className="h-px w-16 bg-white/30" />
 
               <span className="text-[9px] tracking-[0.3em] text-white/35">
-                GESTÃƒO â€¢ ARTE â€¢ EXPERIÃŠNCIA
+                GESTÃO • ARTE • EXPERIÊNCIA
               </span>
 
             </motion.div>
@@ -1152,17 +1152,17 @@ export default function Home() {
                 aria-label="Artistas anteriores"
                 className="flex h-12 w-12 items-center justify-center border border-white/15 text-xl text-white/50 transition-all duration-300 hover:border-white hover:text-white"
               >
-                â†
+                ←
               </button>
 
               <button
                 onClick={() =>
                   scrollArtists("right")
                 }
-                aria-label="PrÃ³ximos artistas"
+                aria-label="Próximos artistas"
                 className="flex h-12 w-12 items-center justify-center border border-white/15 text-xl text-white/50 transition-all duration-300 hover:border-white hover:text-white"
               >
-                â†’
+                →
               </button>
 
             </div>
@@ -1264,7 +1264,7 @@ export default function Home() {
       </section>
 
       {/* =========================================================
-    SERVIÃ‡OS
+    SERVIÇOS
 ========================================================= */}
 
 <section
@@ -1277,7 +1277,7 @@ export default function Home() {
 
       <div>
         <span className="text-[10px] tracking-[0.35em] text-white/35">
-          03 / SERVIÃ‡OS
+          03 / SERVIÇOS
         </span>
 
         <motion.h2
@@ -1388,16 +1388,16 @@ export default function Home() {
 
                 <div className="border-t border-white/10 px-5 py-5 sm:px-7 sm:py-6">
                   <span className="text-[9px] tracking-[0.3em] text-white/35">
-                    MARKETING E DIVULGAÃ‡ÃƒO
+                    PRODUÇÃO DE EVENTOS
                   </span>
 
                   <h4 className="mt-2 font-serif text-2xl tracking-[-0.03em] text-white sm:text-3xl">
-                    ExperiÃªncias que permanecem.
+                    Experiências que permanecem.
                   </h4>
 
                   <p className="mt-3 max-w-[600px] text-[12px] leading-6 text-white/35">
-                    Um olhar sobre momentos, eventos e experiÃªncias
-                    produzidas com artistas e talentos da EmanuÃ h Group.
+                    Um olhar sobre momentos, eventos e experiências
+                    produzidas com artistas e talentos da Emanuàh Group.
                   </p>
                 </div>
               </motion.div>
@@ -1463,11 +1463,11 @@ export default function Home() {
   className="max-w-[800px] text-[clamp(3rem,7vw,7rem)] font-medium leading-[0.88] tracking-[-0.06em] text-white"
 >
 
-                Seu prÃ³ximo
+                Seu próximo
                 <br />
 
                 <span className="text-white/35">
-                  evento comeÃ§a
+                  evento começa
                 </span>
 
                 <br />
@@ -1480,8 +1480,8 @@ export default function Home() {
                 Conectamos seu evento ao talento
                 certo. Artistas e ministros preparados
                 para shows, congressos, cultos,
-                apresentaÃ§Ãµes e experiÃªncias que
-                precisam de presenÃ§a, propÃ³sito e
+                apresentações e experiências que
+                precisam de presença, propósito e
                 profissionalismo.
               </p>
 
@@ -1498,7 +1498,7 @@ export default function Home() {
                   </h3>
 
                   <p className="mt-2 text-xs leading-5 text-white/40">
-                    Shows, apresentaÃ§Ãµes e participaÃ§Ãµes.
+                    Shows, apresentações e participações.
                   </p>
 
                 </div>
@@ -1510,7 +1510,7 @@ export default function Home() {
                   </span>
 
                   <h3 className="mt-5 text-sm font-medium tracking-wide text-white">
-                    MINISTRAÃ‡Ã•ES
+                    MINISTRAÇÕES
                   </h3>
 
                   <p className="mt-2 text-xs leading-5 text-white/40">
@@ -1530,7 +1530,7 @@ export default function Home() {
                   </h3>
 
                   <p className="mt-2 text-xs leading-5 text-white/40">
-                    PresenÃ§a artÃ­stica e produÃ§Ã£o.
+                    Presença artística e produção.
                   </p>
 
                 </div>
@@ -1669,7 +1669,7 @@ export default function Home() {
 
               <Image
                 src="/logo/emanuah-logo-recortado.png"
-                alt="EmanuÃ h Group"
+                alt="Emanuàh Group"
                 fill
                 sizes="95px"
                 className="object-contain object-left"
@@ -1715,7 +1715,7 @@ export default function Home() {
           <div className="mt-10 border-t border-white/[0.08] pt-6">
 
             <p className="text-[9px] tracking-[0.2em] text-white/20">
-              Â© {new Date().getFullYear()} EMANUAH GROUP.
+              © {new Date().getFullYear()} EMANUAH GROUP.
               TODOS OS DIREITOS RESERVADOS.
             </p>
 
@@ -1953,5 +1953,3 @@ export default function Home() {
     </main>
   );
 }
-
-
